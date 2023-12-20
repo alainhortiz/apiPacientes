@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    {% for flashMensaje in app.session.flashbag.get('mensaje') %}
+        <div class="alert alert-info" role="alert">
+            <div class="container">  {{ flashMensaje }}  </div>
+
+        </div>
+    {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header margin-none">
+                    <div class="bg-dark p-10 text-white text-right">
+                        <span class="badge">{{ totalPacientes }}</span> <i class="fa fa-user m-b-5 font-16"></i>
+                        <h5 class="m-b-0 m-t-5"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Pacientes v1.0{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href={{ asset('bundles/easyadmin/stylesheet/bootstrap.min.css') }}>
+            <link rel="stylesheet" href={{ asset('bundles/easyadmin/stylesheet/easyadmin-all.min.css') }}>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    </head>
+    <body>
+        {% block body %}
+          {{ include('menu.html.twig') }}
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('bundles/easyadmin/javascript/jquery.min.js') }}"></script>
+            <script src="{{ asset('bundles/easyadmin/javascript/bootstrap.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
